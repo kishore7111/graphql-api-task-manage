@@ -1,0 +1,47 @@
+add task:
+mutation {
+  addTask(title: "New vignesh Task", description: "Test description", status: "In Progress") {
+    id
+    title
+    description
+    status
+  }
+}
+
+get all task
+{
+  tasks {
+    id
+    title
+    description
+    status
+  }
+}
+updateTask
+mutation {
+  updateTask(id: "670f8aa2a595978986d6a816", title: "FOSS Task", description: "Updated descriptio", status: "Completed") {
+    id
+    title
+    description
+    status
+  }
+}
+get task by id
+{
+  task(id: "67286adf17c123647025ec8d") {
+    id
+    title
+    description
+    status
+  }
+}
+delete task
+mutation {
+  deleteTask(id: "67285ee317c123647025ec8b") {
+    id
+    title
+  }
+}
+
+POST:
+http://localhost:5000/graphql
